@@ -4,6 +4,10 @@
     position: relative;
 }
 
+.mainDashes {
+    font-size: 10vw;
+}
+
 .buttonsHang {
     display: block;
     padding: 30px;

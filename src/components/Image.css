@@ -5,7 +5,8 @@
 }
 
 .hangImage {
-    display: block;
+    display: inline-block;
+    text-align: center;
 }
 
 .incorrectCount {

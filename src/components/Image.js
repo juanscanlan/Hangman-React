@@ -11,8 +11,6 @@ import './Image.css'
 const hangImages = [hangman0, hangman1, hangman2, hangman3, hangman4, hangman5, hangman6]
 
 function Image(props) {
-    let hangImage = 'hangman'.concat(props.count)
-    console.log(hangImage)
     return (
         <div className="display">
             <img className="hangImage" src={hangImages[props.count]} alt="" />
