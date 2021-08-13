@@ -1,4 +1,14 @@
 .Dashes {
     border: 1px solid black;
-    text-align: center
+    text-align: center;
+    position: relative;
+}
+
+.buttonsHang {
+    display: block;
+    padding: 30px;
+}
+
+.hangButton {
+    margin: 5px;
 }

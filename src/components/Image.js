@@ -14,8 +14,10 @@ function Image(props) {
     let hangImage = 'hangman'.concat(props.count)
     console.log(hangImage)
     return (
-        <div className="HangImage">
-            <img src={hangImages[props.count]} alt="" />
+        <div className="display">
+            <img className="hangImage" src={hangImages[props.count]} alt="" />
+            <span className="incorrectCount">Attempts: {props.count}/6</span>
+            <span className="incorrectGuesses">Incorrect Guesses: {props.incorrectGuesses}</span>
         </div>
     )
 }
