@@ -1,8 +1,9 @@
 import React from 'react'
 
-import './App.css'
+//import './App.css'
+import './sass/main.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Container, Row } from 'react-bootstrap'
+//import { Container, Row } from 'react-bootstrap'
 
 import Header from './components/Header.js'
 //import Image from './components/Image.js'
@@ -11,13 +12,12 @@ import Dashes from './components/Dashes.js'
 
 function App() {
   return (
-    <Container>
-      <Row>
+    <div className="container">
         <Header />
         <Dashes />
-      </Row>
+    </div>
+      
 
-    </Container>
   );
 }
 

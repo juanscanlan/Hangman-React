@@ -1,22 +1,20 @@
-import hangman0 from './hangman0.png'
-import hangman1 from './hangman1.png'
-import hangman2 from './hangman2.png'
-import hangman3 from './hangman3.png'
-import hangman4 from './hangman4.png'
-import hangman5 from './hangman5.png'
-import hangman6 from './hangman6.png'
+import hangman0 from '../img/hangman0.png'
+import hangman1 from '../img/hangman1.png'
+import hangman2 from '../img/hangman2.png'
+import hangman3 from '../img/hangman3.png'
+import hangman4 from '../img/hangman4.png'
+import hangman5 from '../img/hangman5.png'
+import hangman6 from '../img/hangman6.png'
 
-import './Image.css'
+//import './Image.css'
 
 const hangImages = [hangman0, hangman1, hangman2, hangman3, hangman4, hangman5, hangman6]
 
 function Image(props) {
     return (
-        <div className="display">
-            <img className="hangImage" src={hangImages[props.count]} alt="" />
-            <span className="incorrectCount">Attempts: {props.count}/6</span>
-            <span className="incorrectGuesses">Incorrect Guesses: {props.incorrectGuesses}</span>
-        </div>
+        
+        <img className="display__image" src={hangImages[props.count]} alt="Image of Hangman" />
+            
     )
 }
 

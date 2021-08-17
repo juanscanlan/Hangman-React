@@ -1,6 +1,9 @@
 import React from 'react'
-import './Dashes.css'
+//import './Dashes.css'
 import Image from './Image.js'
+
+import Buttons from './Buttons.js'
+
 import TryAgain from './TryAgain.js'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -67,41 +70,29 @@ class Dashes extends React.Component {
     render() {
         return (
             <div className="Dashes">
-                <Image count={this.state.hangmanCount} incorrectGuesses={this.state.incorrectGuesses} />
+                
                 <TryAgain lose={this.state.lose} />
+                
+                <div className="display">
+                    <Image count={this.state.hangmanCount} incorrectGuesses={this.state.incorrectGuesses} />
+                    <div className="display__scorer">
+                        <span className="display__scorer__mistakes">Attempts: {this.state.hangmanCount}/6</span>
+                        <span className="display__scorer__guesses">Incorrect Guesses: {this.state.incorrectGuesses}</span>   
+                        <span className="display__scorer__dashes">{this.state.completeness.join(" ")}</span>
+                        <div className="display__scorer__buttons">
+                            <Buttons states={this.state} handleClick={this.handleClick} lose={this.state.lose} incorrectGuesses={this.state.incorrectGuesses} completeness={this.state.completeness}/>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                
                 <hr />
                 <p>{this.state.word}</p>
                 <p className="mainDashes">{this.state.completeness.join(" ")}</p>
                 <hr />
 
-                <div className="buttonsHang">
-                    <Button className="hangButton" variant="info" name="A" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('A') || this.state.completeness.includes('A')}>A</Button>
-                    <Button className="hangButton" variant="info" name="B" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('B') || this.state.completeness.includes('B')}>B</Button>
-                    <Button className="hangButton" variant="info" name="C" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('C') || this.state.completeness.includes('C')}>C</Button>
-                    <Button className="hangButton" variant="info" name="D" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('D') || this.state.completeness.includes('D')}>D</Button>
-                    <Button className="hangButton" variant="info" name="E" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('E') || this.state.completeness.includes('E')}>E</Button>
-                    <Button className="hangButton" variant="info" name="F" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('F') || this.state.completeness.includes('F')}>F</Button>
-                    <Button className="hangButton" variant="info" name="G" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('G') || this.state.completeness.includes('G')}>G</Button>
-                    <Button className="hangButton" variant="info" name="H" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('H') || this.state.completeness.includes('H')}>H</Button>
-                    <Button className="hangButton" variant="info" name="I" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('I') || this.state.completeness.includes('I')}>I</Button>
-                    <Button className="hangButton" variant="info" name="J" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('J') || this.state.completeness.includes('J')}>J</Button>
-                    <Button className="hangButton" variant="info" name="J" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('K') || this.state.completeness.includes('K')}>K</Button>
-                    <Button className="hangButton" variant="info" name="L" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('L') || this.state.completeness.includes('L')}>L</Button>
-                    <Button className="hangButton" variant="info" name="M" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('M') || this.state.completeness.includes('M')}>M</Button>
-                    <Button className="hangButton" variant="info" name="N" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('N') || this.state.completeness.includes('N')}>N</Button>
-                    <Button className="hangButton" variant="info" name="O" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('O') || this.state.completeness.includes('O')}>O</Button>
-                    <Button className="hangButton" variant="info" name="P" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('P') || this.state.completeness.includes('P')}>P</Button>
-                    <Button className="hangButton" variant="info" name="Q" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('Q') || this.state.completeness.includes('Q')}>Q</Button>
-                    <Button className="hangButton" variant="info" name="R" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('R') || this.state.completeness.includes('R')}>R</Button>
-                    <Button className="hangButton" variant="info" name="S" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('S') || this.state.completeness.includes('S')}>S</Button>
-                    <Button className="hangButton" variant="info" name="T" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('T') || this.state.completeness.includes('T')}>T</Button>
-                    <Button className="hangButton" variant="info" name="U" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('U') || this.state.completeness.includes('U')}>U</Button>
-                    <Button className="hangButton" variant="info" name="V" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('V') || this.state.completeness.includes('V')}>V</Button>
-                    <Button className="hangButton" variant="info" name="W" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('W') || this.state.completeness.includes('W')}>W</Button>
-                    <Button className="hangButton" variant="info" name="X" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('X') || this.state.completeness.includes('X')}>X</Button>
-                    <Button className="hangButton" variant="info" name="Y" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('Y') || this.state.completeness.includes('Y')}>Y</Button>
-                    <Button className="hangButton" variant="info" name="Z" onClick={this.handleClick} disabled={this.state.lose || this.state.incorrectGuesses.includes('Z') || this.state.completeness.includes('Z')}>Z</Button>
-                </div>
+                <Buttons states={this.state} handleClick={this.handleClick} lose={this.state.lose} incorrectGuesses={this.state.incorrectGuesses} completeness={this.state.completeness}/>
             </div>
         )
     }

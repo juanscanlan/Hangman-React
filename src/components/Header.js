@@ -1,8 +1,8 @@
-import './Header.css'
+//import './Header.css'
 
 function Header() {
     return (
-        <h1 className="Header">HangMan</h1>
+        <h1 className="header">HangMan</h1>
     )
 }
 
