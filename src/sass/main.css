@@ -1,7 +1,8 @@
 :root {
-  --color-primary: #eb2f64;
-  --color-primary-light: #ff3366;
-  --color-primary-dark: #ba265d;
+  --color-primary: #d4c4f9;
+  --color-primary-light: #fff7ff;
+  --color-primary-dark: #a294c6;
+  --color-background-grey: #f7f7f7;
   --color-grey-light-1: #faf9f9;
   --color-grey-light-2: #f4f2f2;
   --color-grey-light-3: #f0eeee;
@@ -31,31 +32,63 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  color: var(--color-grey-dark-2);
-  background-image: -webkit-gradient(linear, left top, right bottom, from(var(--color-primary-light)), to(var(--color-primary-dark)));
-  background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 247, 255, 0.8)), to(rgba(153, 153, 153, 0.8))), url("../img/BoardGameBackground.jpg");
+  background-image: linear-gradient(to right bottom, rgba(255, 247, 255, 0.8), rgba(153, 153, 153, 0.8)), url("../img/BoardGameBackground.jpg");
+  background-repeat: repeat;
   min-height: 100vh;
 }
 
-.container {
-  border: 1px solid black;
-  background-color: var(--color-grey-light-1);
-  border-radius: 2%;
+.main-container {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#f8f0e3), to(white));
+  background-image: linear-gradient(to bottom right, #f8f0e3, white);
+  max-width: 120rem;
+  min-height: 50rem;
+  margin: 4rem auto;
+  -webkit-box-shadow: var(--shadow-dark);
+          box-shadow: var(--shadow-dark);
 }
 
 .header {
-  border: 1px solid black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  background-color: var(--color-primary);
+}
+
+.YouWin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.YouWin__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.YouWin__block-button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 50%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .display {
@@ -71,7 +104,6 @@ body {
 
 .display__image {
   max-width: 80%;
-  border: 1px solid black;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
           flex: 1 1 50%;
@@ -91,11 +123,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 1px solid black;
 }
 
 .display__scorer__mistakes {
-  border: 1px solid black;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 20%;
           flex: 1 1 20%;
@@ -105,7 +135,6 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 20%;
           flex: 1 1 20%;
-  border: 1px solid black;
 }
 
 .display__scorer__dashes {
@@ -118,7 +147,12 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 20%;
           flex: 1 1 20%;
-  border: 1px solid black;
+}
+
+.display__scorer__dashes span {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .display__scorer__buttons {
@@ -128,10 +162,22 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 40%;
           flex: 0 0 40%;
-  border: 1px solid black;
 }
 
-.buttons {
+.buttons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.buttons-container__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,7 +188,7 @@ body {
           justify-content: center;
 }
 
-.buttons__hangButton {
+.buttons-container__buttons-hangButton {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -155,17 +201,78 @@ body {
   height: 3.2rem;
   width: 3.2rem;
   margin: 0.5rem;
+  border: 1px solid black !important;
+  border-radius: 30% !important;
+  -webkit-box-shadow: 0px 2px 5px 1px gray !important;
+          box-shadow: 0px 2px 5px 1px gray !important;
+  background-color: var(--color-primary-dark) !important;
+}
+
+.buttons-container__buttons-hangButton:hover {
+  -webkit-transform: translateY(-0.3rem);
+          transform: translateY(-0.3rem);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  /*x y blur color*/
+}
+
+.buttons-container__buttons-hangButton:active {
+  /*When clicked*/
+  -webkit-transform: translateY(-0.1rem);
+          transform: translateY(-0.1rem);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  /*When clicked, we want smaller shadow with less blur, so it looks closer to page*/
+}
+
+.body {
+  font-family: "Lato", sans-serif;
+}
+
+.header {
+  font-family: "Merienda", cursive;
+  font-weight: 700;
+  font-size: 5.6rem;
+  line-height: 1.5;
+  -webkit-text-stroke: 1px white;
+  text-shadow: black 1px 2px 5px;
+  padding-bottom: 1rem;
+  color: var(--color-grey-dark-1);
+}
+
+.YouWin span {
+  font-size: 3.5rem;
+}
+
+.YouWin button {
+  font-size: 1.5rem;
 }
 
 .display__scorer__mistakes {
-  font-size: 1.2rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 2.6rem;
+  line-height: 1.5;
+  color: var(--color-grey-dark-1);
 }
 
 .display__scorer__guesses {
-  font-size: 1.2rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 2.6rem;
+  line-height: 1.5;
+  color: var(--color-grey-dark-1);
 }
 
 .display__scorer__dashes {
   font-size: 4vw;
+}
+
+.buttons-container__buttons-hangButton {
+  color: white !important;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem !important;
+  line-height: 1.5;
 }
 /*# sourceMappingURL=main.css.map */

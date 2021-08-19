@@ -5,15 +5,16 @@ import hangman3 from '../img/hangman3.png'
 import hangman4 from '../img/hangman4.png'
 import hangman5 from '../img/hangman5.png'
 import hangman6 from '../img/hangman6.png'
+import congrats from '../img/Congratulations.gif'
 
 //import './Image.css'
 
-const hangImages = [hangman0, hangman1, hangman2, hangman3, hangman4, hangman5, hangman6]
+const hangImages = [hangman0, hangman1, hangman2, hangman3, hangman4, hangman5, hangman6, congrats]
 
 function Image(props) {
     return (
         
-        <img className="display__image" src={hangImages[props.count]} alt="Image of Hangman" />
+        <img className="display__image" src={hangImages[props.count]} alt="Hangman" />
             
     )
 }

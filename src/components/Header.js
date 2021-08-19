@@ -2,7 +2,7 @@
 
 function Header() {
     return (
-        <h1 className="header">HangMan</h1>
+        <h1 className="header">HANGMAN</h1>
     )
 }
 
