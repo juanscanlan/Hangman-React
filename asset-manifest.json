@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/Hangman-React/static/css/main.c385034b.chunk.css",
+    "main.js": "/Hangman-React/static/js/main.e73382b9.chunk.js",
+    "main.js.map": "/Hangman-React/static/js/main.e73382b9.chunk.js.map",
+    "runtime-main.js": "/Hangman-React/static/js/runtime-main.4c8d38bd.js",
+    "runtime-main.js.map": "/Hangman-React/static/js/runtime-main.4c8d38bd.js.map",
+    "static/css/2.818011ed.chunk.css": "/Hangman-React/static/css/2.818011ed.chunk.css",
+    "static/js/2.932e6ecb.chunk.js": "/Hangman-React/static/js/2.932e6ecb.chunk.js",
+    "static/js/2.932e6ecb.chunk.js.map": "/Hangman-React/static/js/2.932e6ecb.chunk.js.map",
+    "static/js/3.71888087.chunk.js": "/Hangman-React/static/js/3.71888087.chunk.js",
+    "static/js/3.71888087.chunk.js.map": "/Hangman-React/static/js/3.71888087.chunk.js.map",
+    "index.html": "/Hangman-React/index.html",
+    "static/css/2.818011ed.chunk.css.map": "/Hangman-React/static/css/2.818011ed.chunk.css.map",
+    "static/css/main.c385034b.chunk.css.map": "/Hangman-React/static/css/main.c385034b.chunk.css.map",
+    "static/js/2.932e6ecb.chunk.js.LICENSE.txt": "/Hangman-React/static/js/2.932e6ecb.chunk.js.LICENSE.txt",
+    "static/media/main.css": "/Hangman-React/static/media/seamlessFlowers.45ac5515.jpg",
+    "static/media/Congratulations.ccde8fc6.gif": "/Hangman-React/static/media/Congratulations.ccde8fc6.gif",
+    "static/media/hangman0.233b53a6.png": "/Hangman-React/static/media/hangman0.233b53a6.png",
+    "static/media/hangman1.5d038ed4.png": "/Hangman-React/static/media/hangman1.5d038ed4.png",
+    "static/media/hangman2.b6be421c.png": "/Hangman-React/static/media/hangman2.b6be421c.png",
+    "static/media/hangman3.d9034444.png": "/Hangman-React/static/media/hangman3.d9034444.png",
+    "static/media/hangman4.c224a3b3.png": "/Hangman-React/static/media/hangman4.c224a3b3.png",
+    "static/media/hangman5.1e623ed8.png": "/Hangman-React/static/media/hangman5.1e623ed8.png",
+    "static/media/hangman6.409d8bfc.png": "/Hangman-React/static/media/hangman6.409d8bfc.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4c8d38bd.js",
+    "static/css/2.818011ed.chunk.css",
+    "static/js/2.932e6ecb.chunk.js",
+    "static/css/main.c385034b.chunk.css",
+    "static/js/main.e73382b9.chunk.js"
+  ]
+}
