@@ -1,16 +1,9 @@
 import React from 'react'
-//import './Dashes.css'
 import Image from './Image.js'
 
 import Buttons from './Buttons.js'
 
-import TryAgain from './TryAgain.js'
-import YouWin from './YouWin.js'
-
-//import 'bootstrap/dist/css/bootstrap.min.css'
-//import { Button } from 'react-bootstrap'
-
-//import hangman0 from './hangman0.png'
+import EndResult from './EndResult.js'
 
 import words from '../words.json'
 
@@ -57,8 +50,7 @@ class Dashes extends React.Component {
             this.setState({ completeness: tempWord })
             if (!tempWord.includes('_')) {
                 this.setState({
-                    win: true,
-                    hangmanCount: 7
+                    win: true
                 })
             }
         } else {
@@ -80,13 +72,11 @@ class Dashes extends React.Component {
         console.log(this.state.win)
         return (
             <div className="Dashes">
-                
-                <TryAgain lose={this.state.lose} />
-                <YouWin win={this.state.win}/>
+                <EndResult win={this.state.win} lose={this.state.lose}/>
                 <div className="display">
-                    <Image count={this.state.hangmanCount} incorrectGuesses={this.state.incorrectGuesses} />
+                    <Image count={this.state.hangmanCount} win={this.state.win} />
                     <div className="display__scorer">
-                        <span className="display__scorer__mistakes">Mistakes: {this.state.hangmanCount}/6   {this.state.word}</span>
+                        <span className="display__scorer__mistakes">Mistakes: [{this.state.hangmanCount}/6]</span>
                         <span className="display__scorer__guesses">Incorrect Guesses: {this.state.incorrectGuesses}</span>   
                         <div className="display__scorer__dashes">
                             <span>{this.state.completeness.join(" ")}</span>
@@ -96,6 +86,7 @@ class Dashes extends React.Component {
                         </div>
                     </div>
                 </div>
+                <p className="Answer">Answer: {this.state.word}</p>
             </div>
         )
     }

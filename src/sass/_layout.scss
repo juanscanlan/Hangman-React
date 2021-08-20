@@ -1,15 +1,26 @@
 .main-container {
-  //border: 1px solid #000000;
-  background-image: linear-gradient(to bottom right, #f8f0e3, white);
+  border: 0.2rem solid var(--color-grey-dark-1);
+  box-shadow: 0rem 0rem 4rem 0.5rem var(--color-grey-dark-1); //var(--shadow-dark);
+  //background: url("../img/seamlessFlowers.jpg");
+  background: linear-gradient(to top, rgba(#85627a, 0.8), rgba(#e39cab, 0.8)),
+    url("../img/seamlessFlowers.jpg");
 
+  background-repeat: repeat;
+  background-size: 30rem;
+
+  //max-width: 120rem;
+  min-width: 90%;
   max-width: 120rem;
   min-height: 50rem;
   margin: 4rem auto;
-  box-shadow: var(--shadow-dark);
+
+  @media only screen and (max-width: 1200px) {
+    margin: 0;
+  }
 }
 
 .header {
-  //border: 1px solid black;
+  border-bottom: 0.2rem solid var(--color-grey-dark-1);
   display: flex;
   justify-content: center;
   margin-left: 0px;
@@ -18,9 +29,11 @@
   background-color: var(--color-primary);
 }
 
-.YouWin {
+.EndResult {
   display: flex;
   justify-content: center;
+
+  max-width: 100%;
 
   &__block {
     display: flex;
@@ -28,7 +41,7 @@
 
     &-button {
       align-self: center;
-      width: 50%;
+      width: 100%;
 
       margin-top: 1rem;
       margin-bottom: 2rem;
@@ -43,7 +56,6 @@
 
   &__image {
     max-width: 80%;
-    //border: 1px solid black;
     flex: 1 1 50%;
   }
 
@@ -53,16 +65,12 @@
     flex-direction: column;
     justify-content: space-between;
 
-    //border: 1px solid black;
+    max-width: 100%; // So it doesn't overflow main container for mobile display
 
-    &__mistakes {
-      //border: 1px solid black;
-      flex: 1 1 20%;
-    }
-
+    &__mistakes,
     &__guesses {
       flex: 1 1 20%;
-      //border: 1px solid black;
+      margin-left: 2rem;
     }
 
     &__dashes {
@@ -73,18 +81,17 @@
 
     &__dashes span {
       align-self: center;
-      //box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
-      //background: transparent;
-      //box-shadow: 0px 0px 40px 20px #0ff;
-      //border-radius: 10%;
-      //border: 1px solid black;
-      //text-shadow: 0px 2px 1px white;
     }
 
     &__buttons {
       display: flex;
       flex: 0 0 40%;
-      //border: 1px solid black;
     }
   }
+}
+
+.Answer {
+  color: white;
+  -webkit-transform: scale(-1, -1);
+  transform: scale(-1, -1);
 }
