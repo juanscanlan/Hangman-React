@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Hangman-React/static/css/main.c385034b.chunk.css",
+    "main.css": "/Hangman-React/static/css/main.819d83f8.chunk.css",
     "main.js": "/Hangman-React/static/js/main.e73382b9.chunk.js",
     "main.js.map": "/Hangman-React/static/js/main.e73382b9.chunk.js.map",
     "runtime-main.js": "/Hangman-React/static/js/runtime-main.4c8d38bd.js",
@@ -12,7 +12,7 @@
     "static/js/3.71888087.chunk.js.map": "/Hangman-React/static/js/3.71888087.chunk.js.map",
     "index.html": "/Hangman-React/index.html",
     "static/css/2.818011ed.chunk.css.map": "/Hangman-React/static/css/2.818011ed.chunk.css.map",
-    "static/css/main.c385034b.chunk.css.map": "/Hangman-React/static/css/main.c385034b.chunk.css.map",
+    "static/css/main.819d83f8.chunk.css.map": "/Hangman-React/static/css/main.819d83f8.chunk.css.map",
     "static/js/2.932e6ecb.chunk.js.LICENSE.txt": "/Hangman-React/static/js/2.932e6ecb.chunk.js.LICENSE.txt",
     "static/media/main.css": "/Hangman-React/static/media/seamlessFlowers.45ac5515.jpg",
     "static/media/Congratulations.ccde8fc6.gif": "/Hangman-React/static/media/Congratulations.ccde8fc6.gif",
@@ -28,7 +28,7 @@
     "static/js/runtime-main.4c8d38bd.js",
     "static/css/2.818011ed.chunk.css",
     "static/js/2.932e6ecb.chunk.js",
-    "static/css/main.c385034b.chunk.css",
+    "static/css/main.819d83f8.chunk.css",
     "static/js/main.e73382b9.chunk.js"
   ]
 }
