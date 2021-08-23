@@ -1,12 +1,12 @@
 import React from 'react'
+
 import Image from './Image.js'
-
 import Buttons from './Buttons.js'
-
 import EndResult from './EndResult.js'
 
 import words from '../words.json'
 
+// Input a word and a letter. Returns an array of indices of such letter in the word. 
 function getAllIndexes(arr, val) {
     var indexes = [], i;
     for (i = 0; i < arr.length; i++)
@@ -15,7 +15,7 @@ function getAllIndexes(arr, val) {
     return indexes;
 }
 
-class Dashes extends React.Component {
+class Main extends React.Component {
     constructor() {
         super()
         this.state = {
@@ -32,9 +32,11 @@ class Dashes extends React.Component {
     }
 
     componentDidMount() {
+        // On page reload, get a random word from the word list and save it to state.
         let randIdx = Math.floor(Math.random() * this.state.list.length)
         this.setState({
             word: this.state.list[randIdx].toUpperCase(),
+            //Create dashed line with the same number of characters as the word. 
             completeness: "_".repeat(this.state.list[randIdx].length).split("")
         })
     }
@@ -48,31 +50,29 @@ class Dashes extends React.Component {
         if (this.state.word.includes(name)) {
             for (let i in indxs) { tempWord[indxs[i]] = name }
             this.setState({ completeness: tempWord })
+            // If no more missing letters, the user has won
             if (!tempWord.includes('_')) {
                 this.setState({
                     win: true
                 })
             }
         } else {
+            //If incorrect letter, it is added to incorrectGuesses and the mistake count increases by 1.
             let newHangman = this.state.hangmanCount + 1
             let incGuesses = this.state.incorrectGuesses.concat(name.toUpperCase(), ' ')
             this.setState({
                 hangmanCount: newHangman,
                 incorrectGuesses: incGuesses
             })
+            //6 mistakes and the user loses
             if (newHangman === 6) { this.setState({ lose: true }) }
         }
-
-
-
-
     }
 
     render() {
-        console.log(this.state.win)
         return (
             <div className="Dashes">
-                <EndResult win={this.state.win} lose={this.state.lose}/>
+                <EndResult win={this.state.win} lose={this.state.lose} word={this.state.word}/>
                 <div className="display">
                     <Image count={this.state.hangmanCount} win={this.state.win} />
                     <div className="display__scorer">
@@ -92,4 +92,4 @@ class Dashes extends React.Component {
     }
 }
 
-export default Dashes
+export default Main

@@ -7,8 +7,6 @@ import hangman5 from '../img/hangman5.png'
 import hangman6 from '../img/hangman6.png'
 import congrats from '../img/Congratulations.gif'
 
-//import './Image.css'
-
 const hangImages = [hangman0, hangman1, hangman2, hangman3, hangman4, hangman5, hangman6]
 
 function Image(props) {
@@ -18,12 +16,9 @@ function Image(props) {
             )
     } else {
         return (
-        
-            <img className="display__image" src={hangImages[props.count]} alt="Hangman" />
-                
+            <img className="display__image" src={hangImages[props.count]} alt="Hangman" />    
         )
     }
-    
 }
 
 export default Image
