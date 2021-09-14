@@ -1,4 +1,4 @@
-# Classic Hangman Game in React.JS
+# 🧍‍ Classic Hangman Game in React.JS 🧍‍
 Link to live site: https://juanscanlan.github.io/Hangman-React/
 
 <b>Languages and Tools used:<b><br>
