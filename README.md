@@ -16,7 +16,7 @@ Answer is upside down in the bottom right corner of keyboard: <br>
 
 
 
-## How to play:
+## 🎲 How to play:
 - A random word is generated on each page reload. It is hidden by dashes on the screen:<br>
 ![alt text](./src/img/readMeImgs/dashes.jpg)
 
